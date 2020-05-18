@@ -6,4 +6,4 @@
     - Add into the folder *Adaptee* class *ContainsDigitPredicate* solution of this [task](https://autocode.lab.epam.com/course-manager/task/137).
     - Put into the folder *Adapters* adapter classes that implement the required interfaces.
     - Put into the folder *Predicate* predicate classes for the different types.
-    - Use classes adapter and predicate classes for deelop unit and moq tests (folders NUnitTests and MoqTests). 
+    - Use classes adapter and predicate classes for develop unit and moq tests (put into the folders *NUnitTests* and *MoqTests*). 
