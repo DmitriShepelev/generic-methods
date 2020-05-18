@@ -2,7 +2,7 @@
 
 namespace GenericMethodsTask.Tests.Adapters
 {
-    internal class ContainsDigitPredicateAdapter : IPredicate<int>
+    public class ContainsDigitPredicateAdapter : IPredicate<int>
     {
         //TODO: Add necessary code and remove this comment.
         
