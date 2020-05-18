@@ -2,7 +2,7 @@
 
 namespace GenericMethodsTask.Tests.Adaptee
 {
-    internal static class DoubleExtension
+    public static class DoubleExtension
     {
         /// <summary>
         /// Returns a string representation of a double type number
