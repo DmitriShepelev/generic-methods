@@ -5,7 +5,7 @@ namespace GenericMethodsTask.Tests.Adaptee
     //Note: This class should not implement any interfaces
     //Put your code from class ContainsDigitPredicate see 
     // https://gitlab.com/epam-autocode-tasks/filter-strategy/-/blob/master/FilterStrategyTask.Tests/PredicateImplementations/ContainsDigitPredicate.cs
-    internal class ContainsDigitPredicate
+    public class ContainsDigitPredicate
     {
         //TODO: Add code here if necessary or delete this comment.
         
