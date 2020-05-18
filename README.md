@@ -1,4 +1,4 @@
-## Task description Draft ##
+## Task description ##
 
 - Implement generic methods of the class *ArrayExtension*. The task definitions are given in the  XML-comments for each method.
 - To test generic methods of the class ArrayExtension, follow these steps:
