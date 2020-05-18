@@ -46,7 +46,7 @@ namespace GenericMethodsTask.Tests.MoqTests
             mockPredicate.Verify(p => p.Verify(It.IsAny<int>()), Times.Exactly(1));
         }
 
-        [Test]
+        /*[Test]
         public void FilterByTests()
         {
             var source = new int[] {12, 35, -65, 543, 23};
@@ -58,6 +58,6 @@ namespace GenericMethodsTask.Tests.MoqTests
             CollectionAssert.AreEqual(actual, expected);
 
             mockPredicate.Verify(p => p.Verify(It.IsAny<int>()), Times.Exactly(5));
-        }
+        }*/
     }
 }
