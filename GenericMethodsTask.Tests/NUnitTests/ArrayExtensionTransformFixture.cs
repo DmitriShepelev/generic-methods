@@ -1,7 +1,7 @@
-﻿using System;
+using System;
 using System.Linq;
+using Adapters;
 using GenericMethodsTask.Interfaces;
-using GenericMethodsTask.Tests.Adapters;
 using NUnit.Framework;
 
 namespace GenericMethodsTask.Tests.NUnitTests
