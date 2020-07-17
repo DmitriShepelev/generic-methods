@@ -1,8 +1,8 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
+using Adapters;
+using Comparers;
 using ContainsDigitPredicate;
 using GenericMethodsTask.Interfaces;
-using GenericMethodsTask.Tests.Adapters;
-using GenericMethodsTask.Tests.Comparers;
 using NUnit.Framework;
 
 namespace GenericMethodsTask.Tests.NUnitTests
