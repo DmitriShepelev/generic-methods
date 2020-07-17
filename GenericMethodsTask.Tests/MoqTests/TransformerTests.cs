@@ -1,3 +1,4 @@
+using Adapters;
 using GenericMethodsTask.Interfaces;
 using Moq;
 using NUnit.Framework;
