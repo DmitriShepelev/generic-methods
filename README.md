@@ -1,4 +1,4 @@
 - Implement generic methods of the class *ArrayExtension*. The task definitions are given in the  XML-comments for each method.
 - To test generic methods of the class *ArrayExtension*, follow these steps:
-    - Put into the folder Adapters adapter classes *DoubleExtension (project IEEE754FormatTask)* and *ContainsDigitValidator (project ContainsDigitPredicate)* that implement the required interfaces.
+    - Put into the Adapters project adapter classes *DoubleExtension (project IEEE754FormatTask)* and *ContainsDigitValidator (project ContainsDigitPredicate)* that implement the required interfaces.
     - Use classes adapter for develop unit and mock tests (put into the folders NUnitTests and MoqTests).
