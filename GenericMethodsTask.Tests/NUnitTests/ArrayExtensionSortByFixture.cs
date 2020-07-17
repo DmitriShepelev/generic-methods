@@ -1,6 +1,6 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using GenericMethodsTask.Tests.Comparers;
+using Comparers;
 using NUnit.Framework;
 
 namespace GenericMethodsTask.Tests.NUnitTests
