@@ -1,5 +1,4 @@
-﻿using GenericMethodsTask.Interfaces;
-using GenericMethodsTask.Tests.Adapters;
+using GenericMethodsTask.Interfaces;
 using Moq;
 using NUnit.Framework;
 
