@@ -3,6 +3,8 @@ using GenericMethodsTask.Interfaces;
 using Moq;
 using NUnit.Framework;
 
+#pragma warning disable CA1707
+
 namespace GenericMethodsTask.Tests.MoqTests
 {
     [TestFixture]
@@ -17,7 +19,7 @@ namespace GenericMethodsTask.Tests.MoqTests
             var mockPredicate = new Mock<IPredicate<int>>();
 
             mockPredicate
-                .Setup(p => p.Verify(It.Is<int>(i => new ContainsDigitValidator() {Digit = 5}.Verify(i))))
+                .Setup(p => p.Verify(It.Is<int>(i => new ContainsDigitValidator() { Digit = 5 }.Verify(i))))
                 .Returns(true);
 
             IPredicate<int> predicate = mockPredicate.Object;
@@ -36,7 +38,7 @@ namespace GenericMethodsTask.Tests.MoqTests
             Mock<IPredicate<int>> mockPredicate = new Mock<IPredicate<int>>();
 
             mockPredicate
-                .Setup(p => p.Verify(It.Is<int>(i => new ContainsDigitValidator() {Digit = 5}.Verify(i))))
+                .Setup(p => p.Verify(It.Is<int>(i => new ContainsDigitValidator() { Digit = 5 }.Verify(i))))
                 .Returns(true);
 
             IPredicate<int> predicate = mockPredicate.Object;
@@ -49,14 +51,14 @@ namespace GenericMethodsTask.Tests.MoqTests
         [Test]
         public void FilterTests()
         {
-            var source = new[] {12, 35, -65, 543, 23};
+            var source = new[] { 12, 35, -65, 543, 23 };
 
-            var expected = new[] {35, -65, 543};
+            var expected = new[] { 35, -65, 543 };
 
             Mock<IPredicate<int>> mockPredicate = new Mock<IPredicate<int>>();
 
             mockPredicate
-                .Setup(p => p.Verify(It.Is<int>(i => new ContainsDigitValidator {Digit = 5}.Verify(i))))
+                .Setup(p => p.Verify(It.Is<int>(i => new ContainsDigitValidator { Digit = 5 }.Verify(i))))
                 .Returns(true);
 
             IPredicate<int> predicate = mockPredicate.Object;
