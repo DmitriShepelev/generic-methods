@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using GenericMethodsTask.Interfaces;
 
 namespace GenericMethodsTask
@@ -31,8 +30,7 @@ namespace GenericMethodsTask
         /// <returns>An array, each element of which is transformed.</returns>
         /// <exception cref="ArgumentNullException">Thrown when array or transformer is null.</exception>
         /// <exception cref="ArgumentException">Thrown when array is empty.</exception>
-        public static TResult[] Transform<TSource, TResult>(this TSource[] source,
-            ITransformer<TSource, TResult> transformer)
+        public static TResult[] Transform<TSource, TResult>(this TSource[] source, ITransformer<TSource, TResult> transformer)
         {
             throw new NotImplementedException();
         }
@@ -47,8 +45,7 @@ namespace GenericMethodsTask
         /// <exception cref="ArgumentNullException">Thrown when array is null.</exception>
         /// <exception cref="ArgumentException">Thrown when array is empty.</exception>
         /// <exception cref="ArgumentNullException">Thrown when comparer is null, and one or more elements
-        /// in array do not implement the <see cref="IComparable{T}"/>  interface.
-        ///</exception>
+        /// in array do not implement the <see cref="IComparable{T}"/>  interface.</exception>
         public static TSource[] SortBy<TSource>(this TSource[] source, IComparer<TSource> comparer)
         {
             throw new NotImplementedException();
@@ -72,6 +69,7 @@ namespace GenericMethodsTask
         /// </summary>
         /// <typeparam name="TSource">The type of the elements of array.</typeparam>
         /// <param name="source">A array of elements to reverse.</param>
+        /// <returns>Revers array.</returns>
         /// <exception cref="ArgumentNullException">Thrown when array is null.</exception>
         /// <exception cref="ArgumentException">Thrown when array length equal to zero.</exception>
         public static TSource[] Reverse<TSource>(this TSource[] source)
