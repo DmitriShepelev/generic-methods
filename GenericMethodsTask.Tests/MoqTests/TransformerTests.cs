@@ -3,6 +3,8 @@ using GenericMethodsTask.Interfaces;
 using Moq;
 using NUnit.Framework;
 
+#pragma warning disable CA1707
+
 namespace GenericMethodsTask.Tests.MoqTests
 {
     [TestFixture]
@@ -12,7 +14,7 @@ namespace GenericMethodsTask.Tests.MoqTests
         [TestCase(-451387.2345, "1100000100011011100011001110110011110000001000001100010010011100")]
         [TestCase(4294967295.012, "0100000111101111111111111111111111111111111000000110001001001110")]
         [TestCase(double.NegativeInfinity, "1111111111110000000000000000000000000000000000000000000000000000")]
-        public void TransformDoubleTest(double value, string expected)
+        public void TransformDouble_Test(double value, string expected)
         {
             var mockPredicate = new Mock<ITransformer<double, string>>();
 
@@ -29,9 +31,9 @@ namespace GenericMethodsTask.Tests.MoqTests
         }
 
         [Test]
-        public void TransformTests()
+        public void Transform_Tests()
         {
-            var source = new[] {122.625, -255.255, 255.255, 4294967295.012, -451387.2345, 0.2345E-12};
+            var source = new[] { 122.625, -255.255, 255.255, 4294967295.012, -451387.2345, 0.2345E-12 };
 
             var expected = new[]
             {
@@ -40,7 +42,7 @@ namespace GenericMethodsTask.Tests.MoqTests
                 "0100000001101111111010000010100011110101110000101000111101011100",
                 "0100000111101111111111111111111111111111111000000110001001001110",
                 "1100000100011011100011001110110011110000001000001100010010011100",
-                "0011110101010000100000000110000001011111000011101110100001011011"
+                "0011110101010000100000000110000001011111000011101110100001011011",
             };
 
             var mockPredicate = new Mock<ITransformer<double, string>>();
@@ -50,7 +52,7 @@ namespace GenericMethodsTask.Tests.MoqTests
                 .Returns((double d) => new GetIEEE754FormatAdapter().Transform(d));
 
             ITransformer<double, string> transformer = mockPredicate.Object;
-            
+
             var actual = source.Transform(transformer);
 
             CollectionAssert.AreEqual(actual, expected);
