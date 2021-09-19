@@ -1,18 +1,20 @@
-using ContainsDigitPredicate;
+﻿using ContainsDigitPredicate;
 using GenericMethodsTask.Interfaces;
 
 namespace Adapters
 {
-    public class ContainsDigitContainsDigitValidatorAdapter : IPredicate<int>
+    public class ContainsDigitPredicateAdapter : IPredicate<int>
     {
-        public ContainsDigitContainsDigitValidatorAdapter(ContainsDigitValidator validator)
+        private readonly ContainsDigitValidator adapter;
+
+        public ContainsDigitPredicateAdapter(ContainsDigitValidator validator)
         {
-            throw new System.NotImplementedException();
+            this.adapter = validator;
         }
         
         public bool Verify(int obj)
         {
-            throw new System.NotImplementedException();
+            return this.adapter.Verify(obj);
         }
     }
 }
